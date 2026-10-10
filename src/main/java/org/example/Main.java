@@ -4,15 +4,14 @@ import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
-        ArrayList<Notificacao> notificacoes = new ArrayList<>();
+        ArrayList<Veiculo> veiculos = new ArrayList<>();
 
-        notificacoes.add(new Email());
-        notificacoes.add(new SMS());
+        veiculos.add(new Carro());
+        veiculos.add(new Moto());
 
-        String mensagem = "Sua compra foi aprovada!";
-
-        for (Notificacao notificacao : notificacoes) {
-            notificacao.enviar(mensagem);
+        for (Veiculo veiculo : veiculos) {
+            veiculo.ligar();
+            veiculo.acelerar();
         }
     }
 }
